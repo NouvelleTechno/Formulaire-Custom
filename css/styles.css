@@ -1,0 +1,54 @@
+:root{
+    --border: 1px solid #839c49;
+    --bg: #49839c;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.custom-check input{
+    display: none;
+}
+
+.custom-check label{
+    display: flex;
+    align-items: center;
+}
+
+.custom-check label::before{
+    content: "";
+    display: block;
+    border: var(--border);
+    background-color: var(--bg);
+    color: white;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 3px;
+    margin-right: .25rem;
+    text-align: center;
+    line-height: 1rem;
+}
+.custom-check input:checked + label::before{
+    content: "X";
+}
+
+/* Fichier */
+.custom-file input{
+    display: none;
+}
+
+.custom-file label{
+    display: flex;
+    cursor: pointer;
+}
+
+.custom-file input + label .filename{
+    flex: 2;
+    border: var(--border);
+    padding: .25rem;
+}
+
+.custom-file input + label .button{
+    flex: 1;
+    background-color: var(--bg);
+    color: white;
+    padding: .25rem;
+}
